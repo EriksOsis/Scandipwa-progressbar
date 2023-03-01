@@ -1,0 +1,106 @@
+@import "node_modules/@scandipwa/scandipwa/src/style/abstract/_variables.scss";
+
+.progress-bar-container {
+  height: 150px;
+  width: 100vw;
+  background-color: #f3f3f3;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.progress-line {
+  background-color: #dbdbdb;
+  height: 5px;
+  width: 100%;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.progress-line-filled {
+  height: 100%;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(5%);
+  position: relative;
+  color: #bbbbbb;
+}
+
+.step-counter {
+  width: 40px;
+  height: 40px;
+  background-color: #dbdbdb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  font-weight: 900;
+}
+
+.step-heading {
+  position: absolute;
+  top: 50px;
+  white-space: nowrap;
+  transition: 1s;
+  font-weight: 600;
+}
+
+.step-counter p {
+  margin: 0;
+}
+
+.line-between {
+  background-color: #dbdbdb;
+  height: 5px;
+  width: 75%;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.line-between-filled {
+  height: 100%;
+}
+
+@keyframes barProgress {
+  from {
+    width: 0;
+    background-color: #dbdbdb;
+  }
+  to {
+    width: 100%;
+    background-color: $default-primary-base-color;
+  }
+}
+
+@keyframes stepProgress {
+  from {
+    background-color: #dbdbdb;
+  }
+
+  to {
+    background-color: $default-primary-base-color;
+    color: #f3f3f3;
+  }
+}
+
+@keyframes headingProgress {
+  from {
+    color: #dbdbdb;
+  }
+
+  to {
+    color: #000;
+  }
+}
